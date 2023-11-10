@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DatosPersonalesController;
+use App\Http\Controllers\tiposController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/datos',[DatosPersonalesController::class, 'index']);
+
+
+Route::post('/datos',[DatosPersonalesController::class, 'store']);
+
+
+
+Route::get('/tabla',[DatosPersonalesController::class, 'show']);
+
+Route::get('/tipo',[tiposController::class, 'index']);
+
+Route::post('/tipo',[tiposController::class, 'store']);
+
+
+Route::get('/tipos/all',[tiposController::class, 'mostrar']);
