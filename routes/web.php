@@ -19,17 +19,17 @@ Route::get('/', function () {
 });
 
 Route::get('/datos',[DatosPersonalesController::class, 'index']);
-
-
 Route::post('/datos',[DatosPersonalesController::class, 'store']);
-
-
-
 Route::get('/tabla',[DatosPersonalesController::class, 'show']);
+
+
+
+
 
 Route::get('/tipo',[tiposController::class, 'index']);
 
-Route::post('/tipo',[tiposController::class, 'store']);
+
+Route::post('/tipo/save',[tiposController::class, 'store']);
 
 
 Route::get('/tipos/all',[tiposController::class, 'mostrar']);

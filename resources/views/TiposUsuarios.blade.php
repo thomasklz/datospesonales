@@ -7,14 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{url('tipo')}}" method="post">
+    
+    <form action="{{url('tipo/save')}}" method="post">
         @csrf
         <div>
             <label for="">Tipo</label>
-            <input type="text" name="tipo">
+            <input type="text" name="tipos">
         </div><br>
+        
         <button type="submit">Guardar</button><br>
     </form>
+
+
     <table border="2px solid black;">
         <thead>
             <tr>
